@@ -6,7 +6,7 @@
   <h3 align="center">RapidCart Project</h3>
 
   <p align="center">
-        A simple shopping cart project with DOM manipulation and JavaScript - CSS & SCSS.
+        A simple shopping cart project with DOM manipulation and JavaScript - CSS & TailwindCSS.
      </p>
     <a href="https://github.com/yamisagi/yamisagi"><strong>About Me 💙»</strong></a>
     <br />
@@ -54,13 +54,19 @@
 <!-- add asset here later -->
 <!--<img src="https://github.com/yamisagi/us/blob/main/assets/product.gif" width="350" height="550"> -->
 
-In this repository, I will create a simple shopping cart project with DOM manipulation and JavaScript - CSS & SCSS, and it is for Full Stack Web Development Bootcamp assignment.
+In this repository, I will create a simple shopping cart project with DOM manipulation and JavaScript - CSS & TailwindCSS, and it is for Full Stack Web Development Bootcamp assignment.
 
 <!-- ROADMAP -->
 
 ## Roadmap
 
 - [x] Project Setup
+- [x] HTML Structure
+- [x] CSS Styling
+- [x] JavaScript
+- [x] TailwindCSS
+
+
 
 
 
