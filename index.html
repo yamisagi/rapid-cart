@@ -36,7 +36,10 @@
                   class="w-64 mb-4 rounded"
                 />
                 <h2 class="text-lg font-semibold mb-2">Macbook Air M1</h2>
-                <p class="text-gray-400 mb-4">1.999 $</p>
+                <div class="flex space-x-3">
+                  <p class="text-gray-400 mb-4">1.999 $</p>
+                  <p class="text-gray-500 line-through">2199 $</p>
+                </div>
                 <button
                   class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
                 >
@@ -52,7 +55,10 @@
                   class="w-64 mb-4 rounded"
                 />
                 <h2 class="text-lg font-semibold mb-2">Apple Magic Keyboard</h2>
-                <p class="text-gray-400 mb-4">499 $</p>
+                <div class="flex space-x-3">
+                  <p class="text-gray-400 mb-4">499 $</p>
+                  <p class="text-gray-500 line-through">599 $</p>
+                </div>
                 <button
                   class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
                 >
@@ -68,7 +74,10 @@
                   class="w-64 mb-4 rounded"
                 />
                 <h2 class="text-lg font-semibold mb-2">Apple Magic Mouse</h2>
-                <p class="text-gray-400 mb-4">299 $</p>
+                <div class="flex space-x-3">
+                  <p class="text-gray-400 mb-4">299 $</p>
+                  <p class="text-gray-500 line-through">399 $</p>
+                </div>
                 <button
                   class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
                 >
@@ -145,8 +154,41 @@
               </li>
             </ul>
           </div>
+             <!-- Ara toplam -->
+
+             <div class="mt-12">
+                <h2
+                class="text-3xl font-semibold mb-8 text-center lg:text-left md:text-center md:mx-auto sm:text-center sm:mx-auto"
+                >
+                Toplam
+                </h2>
+                <div class="bg-gray-800 rounded-lg p-6">
+                <div class="flex justify-between mb-4">
+                    <p class="text-gray-400">Ürünler (3)</p>
+                    <p class="text-gray-400">3.797 $</p>
+                </div>
+                <div class="flex justify-between mb-4">
+                    <p class="text-gray-400">Kargo</p>
+                    <p class="text-gray-400">Ücretsiz</p>
+                </div>
+                <div class="flex justify-between mb-4">
+                    <p class="text-gray-400">Vergi</p>
+                    <p class="text-gray-400">0 $</p>
+                </div>
+                <div class="flex justify-between mb-4">
+                    <p class="text-gray-400">Toplam</p>
+                    <p class="text-gray-400">3.797 $</p>
+                </div>
+              <div class="flex justify-center">
+                <button class="bg-blue-500 hover:bg-blue-600 text-white items-center font-semibold py-2 px-4 rounded sm:w-full md:w-full lg:w-1/3">
+                    Ödeme Yap
+                  </button>
+              </div>
+                  
+                </div>
         </div>
       </div>
     </main>
+    <script src="./src/script/app.js"></script>
   </body>
 </html>

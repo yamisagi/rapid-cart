@@ -65,6 +65,10 @@ In this repository, I will create a simple shopping cart project with DOM manipu
 - [x] CSS Styling
 - [x] JavaScript
 - [x] TailwindCSS
+- [x] Deploy to GitHub Pages
+- [x] Create Total Price Section 
+
+
 
 
 
