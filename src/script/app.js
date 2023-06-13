@@ -117,6 +117,7 @@ function renderCart() {
 
   const taxPercentage = 18;
   const taxAmount = totalPrice * (taxPercentage / 100);
+  const fixedTaxAmount = taxAmount.toFixed(2);
 
   // Update cart total
   const totalProductsElement = document.querySelector('.text-gray-400.products-quantity');
@@ -125,8 +126,8 @@ function renderCart() {
   const totalElement = document.querySelector('.text-white.total');
 
   totalProductsElement.textContent = `Ürünler (${totalQuantity})`;
-  totalPriceElement.textContent = `${totalPrice - taxAmount} $`;
-  taxTextElement.textContent = `${taxAmount} $`;
+  totalPriceElement.textContent = `${(totalPrice - taxAmount).toFixed(2)} $`;
+  taxTextElement.textContent = `${fixedTaxAmount} $`;
   totalElement.textContent = `${totalPrice} $`;
 
   const deleteButtons = document.querySelectorAll('.delete-btn');
