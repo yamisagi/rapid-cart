@@ -21,18 +21,30 @@
       href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css"
+      integrity="sha512-0p3K0H3S6Q4bEWZ/WmC94Tgit2ular2/n0ESdfEX8l172YyQj8re1Wu9s/HT9T/T2osUw5Gx/6pAZNk3UKbESw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>RapidCart</title>
   </head>
   <body class="bg-gray-900">
     <header class="flex justify-between items-center">
-      <h1 class="text-5xl text-yellow-50 m-10 text-center sm:text-center md:text-center lg:text-left">
+      <h1
+        class="text-5xl text-yellow-50 m-10 text-center sm:text-center md:text-center lg:text-left"
+      >
         RapidCart
       </h1>
-      <button class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded mr-5" id="reset-button">
+      <button
+        class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded mr-5"
+        id="reset-button"
+      >
         Tümünü Sıfırla
       </button>
     </header>
-    
+
     <main>
       <div class="bg-gray-900 text-white py-8 px-4">
         <div class="container mx-auto">
@@ -87,6 +99,7 @@
             </div>
             <div class="flex justify-center">
               <button
+                id="payment-button"
                 class="bg-blue-500 hover:bg-blue-600 text-white items-center font-semibold py-2 px-4 rounded sm:w-full md:w-full lg:w-1/3"
               >
                 Ödeme Yap
@@ -97,5 +110,11 @@
       </div>
     </main>
     <script type="module" src="./src/script/app.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"
+      integrity="sha512-lOrm9FgT1LKOJRUXF3tp6QaMorJftUjowOWiDcG5GFZ/q7ukof19V0HKx/GWzXCdt9zYju3/KhBNdCLzK8b90Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </body>
 </html>

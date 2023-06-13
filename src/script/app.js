@@ -4,12 +4,47 @@ const productList = document.getElementById('product-list');
 const cart = document.querySelector('#cart');
 const resetButton = document.getElementById('reset-button');
 const products = productsModel.getAllProducts();
+const paymentButton = document.getElementById('payment-button');
 
 let cartList = [];
 
 // Event Listeners
 
 resetButton.addEventListener('click', resetLocalStorage);
+paymentButton.addEventListener('click', () => {
+  // Noty Alert 
+  if (cartList.length > 0) {
+
+    new Noty({
+      type: 'success',
+      layout: 'topRight',
+      text: 'Ödeme Başarılı',
+      timeout: 2000,
+      progressBar: true,
+      closeWith: ['click', 'button'],
+      theme: 'metroui',
+    }).show();
+    // And reset the local storage after payment
+
+    setTimeout(() => {
+      resetLocalStorage();
+      renderCart();
+    }
+      , 2000);
+  } else {
+    new Noty({
+      type: 'error',
+      layout: 'topRight',
+      text: 'Sepetiniz Boş',
+      timeout: 2000,
+      progressBar: true,
+      closeWith: ['click', 'button'],
+      theme: 'metroui',
+    }).show();
+  }
+
+});
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const storedCartList = localStorage.getItem('cartList');
@@ -181,7 +216,6 @@ function updateCartStorage() {
 
 function resetLocalStorage() {
   localStorage.clear();
-  // Refresh the page
   location.reload();
   cartList = [];
 }
