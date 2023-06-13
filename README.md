@@ -67,10 +67,15 @@ In this repository, I will create a simple shopping cart project with DOM manipu
 - [x] TailwindCSS
 - [x] Deploy to GitHub Pages
 - [x] Create Total Price Section 
-
-
-
-
+- [x] Create Remove Button
+- [x] Create Add Button
+- [x] Create Minus Button
+- [x] Create Quantity Input
+- [x] Create Total Price Section
+- [x] Create Remove Button
+- [x] Create Model JSON
+- [x] Create Product List
+- [x] Implement Functionality
 
 
 

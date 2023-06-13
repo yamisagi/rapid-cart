@@ -31,165 +31,28 @@
           <h2
             class="text-3xl font-semibold mb-8 text-center lg:text-left md:text-center md:mx-auto sm:text-center sm:mx-auto"
           >
-            Alışveriş Sepeti
+            Ürünler
           </h2>
 
           <div class="flex justify-center">
             <div
               class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8"
+              id="product-list"
             >
-              <div
-                class="bg-gray-800 rounded-lg p-6 flex flex-col items-center"
-              >
-                <img
-                  src="./src/img/mac.jpg"
-                  alt="Macbook Air M1"
-                  class="w-64 mb-4 rounded"
-                />
-                <h2 class="text-lg font-semibold mb-2">Macbook Air M1</h2>
-                <div class="flex space-x-3 mb-4">
-                  <p class="text-gray-400">1.999 $</p>
-                  <p class="text-gray-500 line-through">2.199 $</p>
-                </div>
-                <div class="flex space-x-2 mb-4">
-                  <button class="quantity-btn" id="decrease-btn">
-                    <i class="fas fa-minus text-red-500"></i>
-                  </button>
-                  <p class="quantity">1</p>
-                  <button class="quantity-btn text-red-500" id="increase-btn">
-                    <i class="fas fa-plus"></i>
-                  </button>
-                </div>
-                <button
-                  class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-                >
-                  Sepete Ekle
-                </button>
-              </div>
-
-              <div
-                class="bg-gray-800 rounded-lg p-6 flex flex-col items-center"
-              >
-                <img
-                  src="./src/img/keyboard.jpg"
-                  alt="Apple Magic Keyboard"
-                  class="w-64 mb-4 rounded"
-                />
-                <h2 class="text-lg font-semibold mb-2">Apple Magic Keyboard</h2>
-                <div class="flex space-x-3">
-                  <p class="text-gray-400 mb-4">499 $</p>
-                  <p class="text-gray-500 line-through">599 $</p>
-                </div>
-                <div class="flex space-x-2 mb-4">
-                  <button class="quantity-btn" id="decrease-btn">
-                    <i class="fas fa-minus text-red-500"></i>
-                  </button>
-                  <p class="quantity">1</p>
-                  <button class="quantity-btn text-red-500" id="increase-btn">
-                    <i class="fas fa-plus"></i>
-                  </button>
-                </div>
-                <button
-                  class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-                >
-                  Sepete Ekle
-                </button>
-              </div>
-              <div
-                class="bg-gray-800 rounded-lg p-6 flex flex-col items-center"
-              >
-                <img
-                  src="./src/img/mouse.jpg"
-                  alt="Apple Magic Mouse"
-                  class="w-64 mb-4 rounded"
-                />
-                <h2 class="text-lg font-semibold mb-2">Apple Magic Mouse</h2>
-                <div class="flex space-x-3">
-                  <p class="text-gray-400 mb-4">299 $</p>
-                  <p class="text-gray-500 line-through">399 $</p>
-                </div>
-                <div class="flex space-x-2 mb-4">
-                  <button class="quantity-btn" id="decrease-btn">
-                    <i class="fas fa-minus text-red-500"></i>
-                  </button>
-                  <p class="quantity">1</p>
-                  <button class="quantity-btn text-red-500" id="increase-btn">
-                    <i class="fas fa-plus"></i>
-                  </button>
-                </div>
-                <button
-                  class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-                >
-                  Sepete Ekle
-                </button>
-              </div>
-            </div>
+          </div>
           </div>
         </div>
 
-        <div class="mt-12">
+        <!-- Cart -->
+
+        <div class="mt-12" >
           <h2
             class="text-3xl font-semibold mb-8 text-center lg:text-left md:text-center md:mx-auto sm:text-center sm:mx-auto"
           >
             Sepet
           </h2>
-          <ul class="bg-gray-800 rounded-lg p-6">
-            <li class="flex items-center justify-between mb-4">
-              <div class="flex items-center">
-                <img
-                  src="./src/img/mouse.jpg"
-                  alt="Apple Magic Mouse"
-                  class="w-10 h-10 rounded-full mr-4"
-                />
-                <div>
-                  <h3 class="text-lg font-semibold mb-2">Apple Magic Mouse</h3>
-                  <p class="text-gray-400">299 $</p>
-                </div>
-              </div>
-              <button
-                class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded"
-              >
-                Sil
-              </button>
-            </li>
-            <li class="flex items-center justify-between mb-4">
-              <div class="flex items-center">
-                <img
-                  src="./src/img/keyboard.jpg"
-                  alt="Apple Magic Keyboard"
-                  class="w-10 h-10 rounded-full mr-4"
-                />
-                <div>
-                  <h3 class="text-lg font-semibold mb-2">
-                    Apple Magic Keyboard
-                  </h3>
-                  <p class="text-gray-400">499 $</p>
-                </div>
-              </div>
-              <button
-                class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded"
-              >
-                Sil
-              </button>
-            </li>
-            <li class="flex items-center justify-between">
-              <div class="flex items-center">
-                <img
-                  src="./src/img/mac.jpg"
-                  alt="Macbook Air M1"
-                  class="w-10 h-10 rounded-full mr-4"
-                />
-                <div>
-                  <h3 class="text-lg font-semibold mb-2">Macbook Air M1</h3>
-                  <p class="text-gray-400">1.999 $</p>
-                </div>
-              </div>
-              <button
-                class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded"
-              >
-                Sil
-              </button>
-            </li>
+          <ul class="bg-gray-800 rounded-lg p-6" id="cart">
+            
           </ul>
         </div>
         <!-- Ara toplam -->
@@ -202,8 +65,8 @@
           </h2>
           <div class="bg-gray-800 rounded-lg p-6">
             <div class="flex justify-between mb-4">
-              <p class="text-gray-400">Ürünler (3)</p>
-              <p class="text-white">3.797 $</p>
+              <p class="text-gray-400 products-quantity">Ürünler (0)</p>
+              <p class="text-white total-price">0 $</p>
             </div>
             <div class="flex justify-between mb-4">
               <p class="text-gray-400">Kargo</p>
@@ -211,11 +74,11 @@
             </div>
             <div class="flex justify-between mb-4">
               <p class="text-gray-400">Vergi</p>
-              <p class="text-white">0 $</p>
+              <p class="text-white tax-text">0 $</p>
             </div>
             <div class="flex justify-between mb-4">
               <p class="text-gray-400">Toplam</p>
-              <p class="text-white">3.797 $</p>
+              <p class="text-white total">0 $</p>
             </div>
             <div class="flex justify-center">
               <button
@@ -228,6 +91,6 @@
         </div>
       </div>
     </main>
-    <script src="./src/script/app.js"></script>
+    <script type="module" src="./src/script/app.js"></script>
   </body>
 </html>
