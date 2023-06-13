@@ -103,7 +103,8 @@ function renderCart() {
         </div>
       </div>
       <button
-        class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded"
+        class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded delete-btn"
+        data-product-id="${item.id}"
       >
         Sil
       </button>
@@ -123,12 +124,19 @@ function renderCart() {
   const taxTextElement = document.querySelector('.text-white.tax-text');
   const totalElement = document.querySelector('.text-white.total');
 
-
   totalProductsElement.textContent = `Ürünler (${totalQuantity})`;
   totalPriceElement.textContent = `${totalPrice - taxAmount} $`;
   taxTextElement.textContent = `${taxAmount} $`;
   totalElement.textContent = `${totalPrice} $`;
 
+  const deleteButtons = document.querySelectorAll('.delete-btn');
+  deleteButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const productId = button.dataset.productId;
+      removeFromCart(productId);
+      renderCart();
+    });
+  });
 }
 
 
@@ -145,4 +153,10 @@ function addToCart(id) {
   }
 }
 
+function removeFromCart(productId) {
+  const index = cartList.findIndex(item => item.id === parseInt(productId));
+  if (index !== -1) {
+    cartList.splice(index, 1);
+  }
+}
 
