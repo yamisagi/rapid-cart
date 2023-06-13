@@ -2,7 +2,9 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-h1,
+h1{
+  font-family: 'Lobster Two', cursive;
+}
 h2,
 h3,
 p,

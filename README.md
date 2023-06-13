@@ -77,6 +77,10 @@ In this repository, I will create a simple shopping cart project with DOM manipu
 - [x] Create Product List
 - [x] Implement Functionality
 - [x] Implement Remove Button Functionality
+- [x] Implement Local Storage
+- [x] Implement Reset All Button Functionality
+- [x] Project Completed 🎉 
+- [x] Ready to Deploy 🚀
 
 
 

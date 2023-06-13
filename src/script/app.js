@@ -2,13 +2,23 @@ import { productsModel } from './products-model.js';
 
 const productList = document.getElementById('product-list');
 const cart = document.querySelector('#cart');
-
+const resetButton = document.getElementById('reset-button');
 const products = productsModel.getAllProducts();
 
-const cartList = [];
-renderProducts();
+let cartList = [];
+
 // Event Listeners
-document.addEventListener('DOMContentLoaded', renderCart);
+
+resetButton.addEventListener('click', resetLocalStorage);
+
+document.addEventListener('DOMContentLoaded', () => {
+  const storedCartList = localStorage.getItem('cartList');
+  if (storedCartList) {
+    cartList = JSON.parse(storedCartList);
+  }
+  renderProducts();
+  renderCart();
+});
 
 // Functions
 function renderProducts() {
@@ -58,7 +68,6 @@ function renderProducts() {
       for (let i = 0; i < quantity; i++) {
         addToCart(product.id);
       }
-      renderCart();
     });
 
     const decreaseButton = productElement.querySelector('#decrease-btn');
@@ -135,29 +144,44 @@ function renderCart() {
     button.addEventListener('click', () => {
       const productId = button.dataset.productId;
       removeFromCart(productId);
-      renderCart();
     });
   });
+
+  updateCartStorage();
 }
-
-
-
 
 function addToCart(id) {
   const product = productsModel.getProductById(parseInt(id));
   const index = cartList.findIndex(item => item.id === product.id);
 
   if (index === -1) {
-    cartList.push({ ...product });
+    cartList.push({ ...product, quantity: 1 });
   } else {
     cartList[index].quantity++;
   }
+
+  renderCart();
 }
 
 function removeFromCart(productId) {
   const index = cartList.findIndex(item => item.id === parseInt(productId));
   if (index !== -1) {
-    cartList.splice(index, 1);
+    cartList[index].quantity--;
+    if (cartList[index].quantity === 0) {
+      cartList.splice(index, 1);
+    }
   }
+
+  renderCart();
 }
 
+function updateCartStorage() {
+  localStorage.setItem('cartList', JSON.stringify(cartList));
+}
+
+function resetLocalStorage() {
+  localStorage.clear();
+  // Refresh the page
+  location.reload();
+  cartList = [];
+}

@@ -15,16 +15,24 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap"
+      rel="stylesheet"
+    />
     <title>RapidCart</title>
   </head>
   <body class="bg-gray-900">
-    <header>
-      <h1
-        class="text-ellipsis text-5xl text-yellow-50 m-10 text-center sm:text-center md:text-center lg:text-left"
-      >
+    <header class="flex justify-between items-center">
+      <h1 class="text-5xl text-yellow-50 m-10 text-center sm:text-center md:text-center lg:text-left">
         RapidCart
       </h1>
+      <button class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded mr-5" id="reset-button">
+        Tümünü Sıfırla
+      </button>
     </header>
+    
     <main>
       <div class="bg-gray-900 text-white py-8 px-4">
         <div class="container mx-auto">
@@ -38,22 +46,19 @@
             <div
               class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8"
               id="product-list"
-            >
-          </div>
+            ></div>
           </div>
         </div>
 
         <!-- Cart -->
 
-        <div class="mt-12" >
+        <div class="mt-12">
           <h2
             class="text-3xl font-semibold mb-8 text-center lg:text-left md:text-center md:mx-auto sm:text-center sm:mx-auto"
           >
             Sepet
           </h2>
-          <ul class="bg-gray-800 rounded-lg p-6" id="cart">
-            
-          </ul>
+          <ul class="bg-gray-800 rounded-lg p-6" id="cart"></ul>
         </div>
         <!-- Ara toplam -->
 
